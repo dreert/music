@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Perfil</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:black;
+color:white;
+margin:0;
+}
+
+.perfil{
+width:95%;
+max-width:1200px;
+margin:auto;
+text-align:center;
+padding-top:40px;
+}
+
+.foto{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.usuario{
+font-size:24px;
+margin-top:10px;
+}
+
+.stats span{
+margin:0 10px;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+border-top:1px solid #ccc;
+padding-top:15px;
+font-weight:bold;
+}
+
+.menu span{
+cursor:pointer;
+font-size:18px;
+}
+
+/* SECCIONES */
+
+.seccion{
+display:none;
+}
+
+/* BIOGRAFÍA */
+
+#bio{
+background:white;
+max-width:1100px;
+margin:30px auto;
+padding:35px;
+border-radius:15px;
+box-shadow:0px 8px 25px rgba(0,0,0,0.35);
+color:#222;
+line-height:1.8;
+text-align:justify;
+}
+
+#bio h1{
+border-left:6px solid #c62828;
+padding-left:12px;
+margin-bottom:20px;
+color:#222;
+}
+
+#bio p{
+margin-bottom:20px;
+}
+
+#bio img{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0px 4px 15px rgba(0,0,0,0.25);
+transition:0.3s;
+}
+
+#bio img:hover{
+transform:scale(1.03);
+}
+
+/* FOTOS */
+
+#fotos{
+background:white;
+max-width:1100px;
+margin:30px auto;
+padding:35px;
+border-radius:15px;
+box-shadow:0px 8px 25px rgba(0,0,0,0.35);
+}
+
+.posts{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.posts img{
+width:100%;
+height:300px;
+object-fit:cover;
+cursor:pointer;
+border-radius:10px;
+box-shadow:0px 4px 15px rgba(0,0,0,0.25);
+transition:0.3s;
+}
+
+.posts img:hover{
+transform:scale(1.03);
+}
+
+/* ÁLBUMES */
+
+#albumes{
+background:white;
+max-width:1100px;
+margin:30px auto;
+padding:35px;
+border-radius:15px;
+box-shadow:0px 8px 25px rgba(0,0,0,0.35);
+color:#222;
+text-align:center;
+}
+
+/* BOTÓN REGRESAR */
+
+button{
+position:fixed;
+bottom:30px;
+right:30px;
+width:80px;
+height:80px;
+border-radius:50%;
+z-index:99999;
+border:none;
+cursor:pointer;
+background-color:#f00;
+color:#fff;
+transition:0.3s;
+
+box-shadow:
+2px 2px 0px hsl(0, 92%, 50%),
+4px 4px 0px hsla(0, 94%, 46%, 0.795),
+6px 6px 0px hsl(0, 89%, 57%),
+8px 8px 0px hsl(0, 78%, 56%),
+10px 10px 0px hsl(0, 79%, 68%),
+12px 12px 0px hsl(244, 55%, 73%),
+14px 14px 0px hsl(229, 50%, 54%),
+16px 16px 0px hsl(236, 60%, 49%),
+18px 18px 0px hsl(239, 100%, 50%);
+}
+
+button:hover{
+background-color:#2e3db7;
+box-shadow:none;
+transform:scale(1.1);
+}
+
+/* IMAGEN GRANDE */
+
+.imagen-grande{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+max-width:80%;
+max-height:80%;
+z-index:1000;
+box-shadow:0 0 20px black;
+}
+
+.fondo{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:999;
+}
+
+</style>
+</head>
+
+<body>
+ <div> <a href="../leyendas.html">
+  <button id="btn-volver">regresar</button>
+  </a>
+</div>
+  
+
+<div class="perfil">
+<img src="fotos de perfiiles/2pax ig.jpg" class="foto">
+
+<div class="usuario">Tupac Shakur</div>
+
+<div class="stats">
+</div>
+
+<div class="menu">
+<span onclick="mostrar('bio')">Biografía</span>
+<span onclick="mostrar('fotos')">Fotos</span>
+<span onclick="mostrar('albumes')">Álbumes</span>
+</div>
+
+<!-- BIOGRAFIA -->
+<div id="bio" class="seccion" style="display:block;"></div>
+
+  <!-- Título principal -->
+  <h1 style="text-align: center;">Tupac Shakur</h1>
+  <p>Tupac Amaru Shakur, conocido también como 2Pac, fue uno de los raperos más influyentes y famosos de la historia del hip-hop. Nació el 16 de junio de 1971 en New York City y murió el 13 de septiembre de 1996 en Las Vegas. Su música se caracterizó por hablar de la realidad social, la desigualdad, la violencia, el racismo y las dificultades de crecer en barrios pobres de Estados Unidos.</p>
+
+  <!-- Fotos de perfil -->
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+    <img src="fotos de perfiiles/2pac pt.webp" width="300" style="border-radius: 8px;">
+    <img src="fotos de perfiiles/tupac pt.png" width="200" style="border-radius: 8px;">
+  </div>
+
+  <!-- Infancia -->
+  <h1 style="text-align: center;">Infancia y juventud</h1>
+  <p>Tupac nació en una familia muy ligada a movimientos sociales. Su madre, Afeni Shakur, fue activista del grupo político Black Panther Party, que luchaba por los derechos de la comunidad afroamericana. Debido a los problemas económicos y a la situación social que vivía su familia, Tupac pasó parte de su infancia mudándose constantemente entre ciudades.</p>
+  <p>Durante su adolescencia se interesó mucho por el arte. Estudió actuación, poesía y música en la Baltimore School for the Arts, donde desarrolló su talento para escribir letras profundas y emocionales.</p>
+
+  <!-- Carrera -->
+  <h1 style="text-align: center;">Carrera musical</h1>
+  <p>A principios de los años 90, Tupac empezó su carrera musical dentro del grupo Digital Underground. Su primer álbum fue <strong>2Pacalypse Now</strong> en 1991. Luego lanzó varios álbumes exitosos:</p>
+
+  <!-- Álbumes en fila -->
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/album 2p.jpg" width="150" style="border-radius: 8px;">
+      <p style="margin-top: 8px;">Strictly 4 My N.I.G.G.A.Z. (1993)</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/tupac album.png" width="150" style="border-radius: 8px;">
+      <p style="margin-top: 8px;">Me Against the World (1995)</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/all-eyez-on-me.webp" width="150" style="border-radius: 8px;">
+      <p style="margin-top: 8px;">All Eyez on Me (1996)</p>
+    </div>
+  </div>
+
+  <p>Este último se convirtió en uno de los discos más famosos del rap y consolidó a Tupac como una de las figuras más importantes del género.</p>
+
+  <!-- Legado -->
+  <h1 style="text-align: center;">Influencia y legado</h1>
+  <p>Tupac no solo fue rapero; también actuó en películas y escribió poesía. Muchas de sus canciones hablaban de problemas reales como la pobreza, la discriminación, la violencia en las calles y la vida en los barrios marginales. A pesar de que murió muy joven, su música siguió influyendo a generaciones de artistas.</p>
+
+  <!-- Muerte -->
+  <h1 style="text-align: center;">Muerte</h1>
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <img src="fotos de perfiiles/estatua 2pc.jpg" width="200" style="border-radius: 8px;">
+  </div>
+  <p>El 7 de septiembre de 1996, Tupac fue herido en un tiroteo en Las Vegas después de asistir a una pelea de boxeo. Tras varios días en el hospital, falleció el 13 de septiembre de 1996 a los 25 años. Su muerte sigue siendo uno de los misterios más debatidos en la historia de la música.</p>
+
+  <!-- Última foto -->
+  <h1 style="text-align: center;">Última foto</h1>
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <img src="fotos de perfiiles/ultima foto.jpg" width="300" style="border-radius: 8px;">
+  </div>
+
+</div>
+
+
+
+<div id="fotos" class="seccion">
+<div class="posts">
+<img src="fotos 2pac 1.jpg"onclick="abrir(this)">
+<img src="fotos de ig/remplazar 2pac.jpg"onclick="abrir(this)">
+<img src="fotos de ig/remplazo 3.jpg"onclick="abrir(this)">
+<img src="fotos de ig/fotos 2pac4.png"onclick="abrir(this)">
+<img src="fotos de ig/fotos ig2.jpg"onclick="abrir(this)">
+<img src="fotos de ig/tupac foto ig.png"onclick="abrir(this)">
+</div>
+</div>
+
+
+
+<div id="albumes" class="seccion">
+<p>Álbumes destacados próximamente 🎶</p>
+</div>
+
+</div>
+
+<script>
+
+function mostrar(seccion){
+
+document.querySelectorAll(".seccion").forEach(div=>{
+div.classList.remove("activo");
+});
+
+document.getElementById(seccion).classList.add("activo");
+
+}
+
+</script>
+<script>
+
+function mostrar(seccion){
+
+document.querySelectorAll(".seccion").forEach(div=>{
+div.style.display="none";
+});
+
+document.getElementById(seccion).style.display="block";
+
+}
+
+</script>
+<script>
+
+function abrir(img){
+
+let fondo = document.createElement("div");
+fondo.className="fondo";
+
+let grande = document.createElement("img");
+grande.src = img.src;
+grande.className="imagen-grande";
+
+fondo.onclick=function(){
+fondo.remove();
+grande.remove();
+}
+
+document.body.appendChild(fondo);
+document.body.appendChild(grande);
+
+}
+
+</script>
+</body>
+</html>

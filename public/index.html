@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>L/R MUSIC LINE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="music-line logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    
+    <div class="box" id="loginBox">
+        <h2>Iniciar Sesión</h2>
+     <input type="text" id="loginUser" placeholder="Usuario">
+    <input type="password" id="loginPass" placeholder="Contraseña">
+ 
+        <button onclick="login()">Entrar</button>
+        <p id="loginError"></p>
+        <p class="link" onclick="mostrarRegistro()">¿No tienes cuenta? Regístrate</p>
+    </div>
+
+    
+    <div class="box" id="registerBox" style="display: none;">
+        <h2>Registrarse</h2>
+        <input type="email" id="regEmail" placeholder="Correo">
+        <input type="text" id="regUser" placeholder="Usuario">
+        <input type="password" id="regPass" placeholder="Contraseña">
+        <input type="password" id="regPass2" placeholder="Repetir contraseña">
+        <button onclick="registrar()">Registrarse</button>
+        <p id="regError"></p>
+        <p class="link" onclick="mostrarLogin()">¿Ya tienes cuenta? Inicia sesión</p>
+    </div>
+
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>

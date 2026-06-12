@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #284f75, #d11010);
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+
+body {
+  margin: 0;
+  min-height: 200vh; 
+}
+
+
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  transition: all 0.5s;
+  font-size: 17px;
+  background-color: rgb(255, 0, 0);
+  color: #fdfdfd;
+  cursor: pointer;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    2px 2px 0px hsl(0, 92%, 50%),
+    4px 4px 0px hsla(0, 94%, 46%, 0.795),
+    6px 6px 0px hsl(0, 89%, 57%),
+    8px 8px 0px hsl(0, 78%, 56%),
+    10px 10px 0px hsl(0, 79%, 68%),
+    12px 12px 0px hsl(244, 55%, 73%),
+    14px 14px 0px hsl(229, 50%, 54%),
+    16px 16px 0px hsl(236, 60%, 49%),
+    18px 18px 0px hsl(239, 100%, 50%);
+}
+
+
+button:hover {
+  background-color: hsl(0, 71%, 43%);
+  color: #3636b9;
+  box-shadow: none;
+  transform: scale(1.05);
+}
+
+button:hover {
+  background-color: hsl(231, 85%, 46%);
+  color: #f8f8f8;
+  box-shadow: none;
+}
+
+
+
+
+.texto-blanco {
+    color: rgb(223, 25, 25);
+}
+
+
+.banner {  
+
+    background-image: url("BAD-BUNNY-MEDELLIN.jpg");
+    background-size: cover;      
+    background-position: center 6%;
+    background-repeat: no-repeat;
+
+    height: 340px;
+    margin: 30px auto;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55); 
+    z-index: 0;
+}
+
+.banner h1,
+.banner p {
+
+    z-index: 1;
+}
+
+
+section {
+    background-color: rgba(255,255,255,0.97);
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+}
+
+
+h2 {
+    border-left: 6px solid #c62828;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.resumen {
+    max-width: 900px;       
+    margin: 30px auto;      
+    display: block;        
+    padding: 20px;
+    background-color: rgba(255,255,255,0.97); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2); 
+}
+
+.resumen h2 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 24px;
+    border-left: 6px solid #c62828;
+    padding-left: 12px;
+}
+
+.resumen p {
+    text-align: justify;   
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;   
+}
+
+
+footer {
+    background-color: #8f1d1d;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+
+ }
+ section {
+    display: flex;           
+    overflow-x: auto;        
+    width: 100%;            
+    height: 430px;          
+    gap: 15px;              
+    padding: 10px;
+    scroll-behavior: smooth; 
+}
+.galeria h2 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 24px;
+    border-left: 6px solid #c62828;
+    padding-left: 12px;
+}
+section img {
+    flex: 0 0 200px;       
+    height: 100%;            
+    object-fit: cover;      
+    opacity: 0.8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+section img:hover {
+    cursor: pointer;
+    flex: 0 0 300px;        
+    opacity: 1;
+    filter: contrast(120%);
+     }
+ 
+
+
+.galeria {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 50px; 
+    background-color: rgba(128, 32, 32, 0.97);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(19, 17, 131, 0.719);
+}
+
+.galeria h2 {
+    margin-bottom: 25px;  
+    color: #fcfcfc;
+    font-size: 24px;
+    border-left: 6px solid #ff0a0a;
+    padding-left: 12px;
+}
+
+.caja-imagenes {
+    display: flex;
+    overflow-x:auto;      
+    gap: 15px;             
+    padding: 20px 0;       
+    height: 500px;         
+    border-radius: 8px;    
+    background-color: #e60f0f; 
+
+    
+}
+
+
+.caja-imagenes img {
+    flex: 0 0 200px;       
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.caja-imagenes img:hover {
+    cursor: pointer;
+    flex: 0 0 1000px;       
+    opacity: 1;
+    filter: contrast(120%);
+}
+.banner h1 {
+    font-family: 'Pirata One', cursive !important;
+    font-size: 5rem;
+    letter-spacing: 2px;
+}

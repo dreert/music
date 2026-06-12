@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Perfil</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:black;
+color: white;
+margin:0;
+}
+
+.perfil{
+width:900px;
+margin:auto;
+text-align:center;
+padding-top:40px;
+}
+
+.foto{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.usuario{
+font-size:24px;
+margin-top:10px;
+}
+
+.stats span{
+margin:0 10px;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+border-top:1px solid #ccc;
+padding-top:15px;
+font-weight:bold;
+}
+
+.menu span{
+cursor:pointer;
+}
+
+
+/* SECCIONES */
+
+.seccion{
+display:none;
+}
+
+.activo{
+display:block;
+}
+
+/* FOTOS */
+
+.posts{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:5px;
+}
+
+.posts img{
+width:100%;
+
+
+}
+
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 99999;
+  border: none;
+  cursor: pointer;
+  background-color: #f00;
+  color: #fff;
+  transition: 0.3s;
+  
+ 
+  box-shadow:
+    2px 2px 0px hsl(0, 92%, 50%),
+    4px 4px 0px hsla(0, 94%, 46%, 0.795),
+    6px 6px 0px hsl(0, 89%, 57%),
+    8px 8px 0px hsl(0, 78%, 56%),
+    10px 10px 0px hsl(0, 79%, 68%),
+    12px 12px 0px hsl(244, 55%, 73%),
+    14px 14px 0px hsl(229, 50%, 54%),
+    16px 16px 0px hsl(236, 60%, 49%),
+    18px 18px 0px hsl(239, 100%, 50%);
+}
+
+button:hover {
+  background-color: #2e3db7; 
+  box-shadow: none;
+  transform: scale(1.1);
+}
+.imagen-grande{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+max-width:80%;
+max-height:80%;
+z-index:1000;
+box-shadow:0 0 20px black;
+}
+
+.fondo{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+z-index:999;
+}
+/* CAJA DE LA BIOGRAFÍA */
+
+#bio{
+background-color: rgba(255,255,255,0.97);
+max-width: 1100px;
+margin: 30px auto;
+padding: 35px;
+border-radius: 10px;
+box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+color: #222;
+line-height: 1.8;
+text-align: justify;
+}
+
+#bio h1{
+border-left: 6px solid #c62828;
+padding-left: 12px;
+margin-bottom: 20px;
+color: #222;
+text-align: left;
+}
+
+#bio p{
+margin-bottom: 20px;
+}
+
+/* FOTOS DE LA BIOGRAFÍA */
+
+#bio img{
+background: white;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+transition: 0.3s;
+}
+
+#bio img:hover{
+transform: scale(1.03);
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+ <div> <a href="../leyendas.html">
+  <button id="btn-volver">regresar</button>
+  </a>
+</div>
+  
+
+<div class="perfil">
+<img src="fotos de perfiiles/perfil mj.jpg" class="foto">
+
+<div class="usuario">Michael Jackson</div>
+
+<div class="stats">
+</div>
+
+<div class="menu">
+<span onclick="mostrar('bio')">Biografía</span>
+<span onclick="mostrar('fotos')">Fotos</span>
+<span onclick="mostrar('albumes')">Álbumes</span>
+</div>
+
+<!-- BIOGRAFIA -->
+<div id="bio" class="seccion activo">
+
+  <!-- Título principal -->
+  <h1 style="text-align: center;">Michael Jackson</h1>
+  <p>Michael Joseph Jackson, conocido como el Rey del Pop, fue uno de los artistas más influyentes y exitosos de la historia de la música. Nació el 29 de agosto de 2009 en Los Ángeles. Su música, sus videos y su forma de bailar revolucionaron la industria del entretenimiento a nivel mundial. Es considerado por críticos, artistas y fanáticos como el mayor entertainter de todos los tiempos.</p>
+
+  <!-- Fotos de perfil -->
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+    <img src="fotos de perfiiles/mj1.jpg" style="width: 280px; height: auto; object-fit: cover; border-radius: 8px;">
+    <img src="fotos de perfiiles/mj2.jpg" style="width: 280px; height: auto; object-fit: cover; border-radius: 8px;">
+  </div>
+
+  <!-- Infancia -->
+  <h1 style="text-align: center;">Infancia y juventud</h1>
+  <p>Michael creció en Gary, Indiana, una ciudad industrial del medio oeste americano. Era el séptimo de nueve hijos de Katherine y Joseph Jackson. Desde muy pequeño mostró un talento excepcional para el canto y el baile. A los 5 años ya era el vocalista principal del grupo familiar <strong>The Jackson 5</strong>, junto a sus hermanos Jackie, Tito, Jermaine y Marlon.</p>
+  <p>La familia firmó con Motown Records en 1969 y lanzaron éxitos como <em>I Want You Back</em> y <em>ABC</em>. A pesar del éxito temprano, Michael tuvo una infancia difícil marcada por la presión y la dureza de su padre Joseph, quien supervisaba estrictamente los ensayos y las actuaciones. El propio Michael reconoció en varias entrevistas que nunca tuvo una niñez normal y que eso lo marcó profundamente.</p>
+  <p>Durante su adolescencia comenzó a desarrollar su carrera como solista mientras seguía trabajando con sus hermanos. Su primera canción solista destacada fue <strong>Got to Be There</strong> en 1971, que demostró que tenía una voz y un carisma únicos.</p>
+
+  <!-- Carrera -->
+  <h1 style="text-align: center;">Carrera musical</h1>
+  <p>En 1979 lanzó <strong>Off the Wall</strong>, su primer gran álbum como solista, producido por Quincy Jones. Fue un éxito enorme que lo estableció como artista independiente. Pero fue en 1982 cuando alcanzó la cima con <strong>Thriller</strong>, el álbum más vendido de la historia de la música con más de 70 millones de copias vendidas. Sus álbumes más importantes fueron:</p>
+
+  <!-- Álbumes en fila -->
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/album mj1.webp" style="width: 240px; height: 240px; object-fit: cover; border-radius: 8px;">
+      <p style="margin-top: 8px;">Thriller (1982)</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/album bad.webp" style="width: 240px; height: 240px; object-fit: cover; border-radius: 8px;">
+      <p style="margin-top: 8px;">Bad (1987)</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="fotos de perfiiles/mj album.jpg" style="width: 240px; height: 240px; object-fit: cover; border-radius: 8px;">
+      <p style="margin-top: 8px;">Dangerous (1991)</p>
+    </div>
+  </div>
+
+  <p>Su video musical de <strong>Thriller</strong>, dirigido por John Landis, es considerado el mejor video de la historia y transformó para siempre la forma de hacer videos musicales. Michael fue también el creador del <strong>moonwalk</strong>, el paso de baile más icónico del mundo, que presentó por primera vez en 1983 durante la actuación de <em>Billie Jean</em> en el especial televisivo Motown 25.</p>
+  <p>A lo largo de su carrera también colaboró con grandes artistas como Paul McCartney, con quien grabó <em>Say Say Say</em> y <em>The Girl Is Mine</em>, y Stevie Wonder. Su álbum <strong>HIStory</strong> de 1995 fue el álbum doble más vendido de la historia.</p>
+
+  <!-- Estilo y baile -->
+  <h1 style="text-align: center;">Estilo y baile</h1>
+  <p>Michael Jackson fue un innovador en todos los sentidos. Su estilo visual era inconfundible: el guante con brillantes, los calcetines blancos, el sombrero fedora y la chaqueta militar se convirtieron en símbolos mundiales. En el escenario combinaba técnicas de danza clásica, funk, soul y efectos visuales únicos.</p>
+  <p>Entre sus movimientos más famosos estaban el moonwalk, el robot, el anti-gravity lean (la inclinación imposible vista en el video de <em>Smooth Criminal</em>) y el toe stand. Muchos coreógrafos y artistas actuales como Usher, Justin Timberlake y Bruno Mars reconocen abiertamente su influencia.</p>
+
+  <!-- Filantropía -->
+  <h1 style="text-align: center;">Filantropía</h1>
+  <p>Michael Jackson fue uno de los artistas más generosos de la historia. En 1985 co-escribió y produjo <strong>We Are the World</strong> junto a Lionel Richie, una canción benéfica para recaudar fondos para África que se convirtió en uno de los sencillos más vendidos de todos los tiempos. A lo largo de su vida donó más de 300 millones de dólares a organizaciones benéficas. Fundó el <strong>Heal the World Foundation</strong> en 1992 para ayudar a niños en situación de pobreza y conflicto en todo el mundo.</p>
+
+  <!-- Legado -->
+  <h1 style="text-align: center;">Influencia y legado</h1>
+  <p>Michael Jackson no solo fue músico; también fue bailarín, productor, filántropo y actor. Sus contribuciones a la música pop, el R&B y el soul son incomparables. Vendió más de 400 millones de discos en todo el mundo y ganó 13 premios Grammy, además de 26 American Music Awards. Es el único artista en haber sido incluido tanto en el Salón de la Fama del Rock como en el del Soul.</p>
+  <p>Su influencia se siente hasta hoy en artistas de todos los géneros. Sus canciones siguen sonando en todo el mundo y sus videos continúan siendo estudiados en escuelas de arte y música. El impacto cultural de Michael Jackson va mucho más allá de la música: cambió la moda, el cine, la danza y la forma en que el mundo ve el entretenimiento.</p>
+
+  <!-- Muerte -->
+  <h1 style="text-align: center;">Muerte</h1>
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <img src="fotos de perfiiles/mj ultima.jpg" style="width: 280px; height: auto; object-fit: cover; border-radius: 8px;">
+  </div>
+  <p>El 25 de junio de 2009, Michael Jackson falleció en su residencia en Los Ángeles a los 50 años, justo cuando se preparaba para su gira de conciertos <strong>This Is It</strong> en Londres, que prometía ser el regreso más esperado de la historia del pop. La causa oficial fue una intoxicación por propofol, un anestésico que le administraba su médico personal Conrad Murray, quien fue declarado culpable de homicidio involuntario en 2011.</p>
+  <p>Su muerte conmocionó al mundo entero. Millones de personas lloraron en las calles, los medios de comunicación paralizaron su programación y artistas de todo el mundo rindieron homenaje. El documental <em>This Is It</em>, basado en los ensayos de su última gira, fue lanzado en 2009 y se convirtió en uno de los documentales musicales más vistos de la historia.</p>
+
+  <!-- Última aparición -->
+  <h1 style="text-align: center;">Última aparición</h1>
+  <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <img src="fotos de perfiiles/statua mj.jpg" style="width: 280px; height: auto; object-fit: cover; border-radius: 8px;">
+  </div>
+  <p>Su última aparición pública fue durante los ensayos de <strong>This Is It</strong> en el Staples Center de Los Ángeles, pocos días antes de su muerte. Quienes estuvieron presentes describieron una actuación llena de energía y perfección, lo que hace aún más impactante su repentina partida.</p>
+
+</div>
+
+
+
+<div id="fotos" class="seccion">
+<div class="posts">
+   <img src="fotos de perfiiles/fotos mj 4 de ig.jpg"onclick="abrir(this)">
+   <img src="fotos de perfiiles/fotos mj 7de ig.jpg"onclick="abrir(this)">
+   <img src="fotos de perfiiles/fotos mj de ig.jpg"onclick="abrir(this)">
+   <img src="fotos de perfiiles/fotos2 mj de ig.jpg"onclick="abrir(this)">
+   <img src="fotos de perfiiles/fotos3 mj de ig.jpg"abrir(this)">
+    <img src="fotos de perfiiles/fotos mj 6 de ig.jpg"onclick="abrir(this)">
+   </div>
+</div>
+
+
+
+<div id="albumes" class="seccion">
+<p>Álbumes destacados próximamente 🎶</p>
+</div>
+
+</div>
+
+<script>
+
+function mostrar(seccion){
+
+document.querySelectorAll(".seccion").forEach(div=>{
+div.classList.remove("activo");
+});
+
+document.getElementById(seccion).classList.add("activo");
+
+}
+
+</script>
+<script>
+
+function mostrar(seccion){
+
+document.querySelectorAll(".seccion").forEach(div=>{
+div.style.display="none";
+});
+
+document.getElementById(seccion).style.display="block";
+
+}
+
+</script>
+<script>
+
+function abrir(img){
+
+let fondo = document.createElement("div");
+fondo.className="fondo";
+
+let grande = document.createElement("img");
+grande.src = img.src;
+grande.className="imagen-grande";
+
+fondo.onclick=function(){
+fondo.remove();
+grande.remove();
+}
+
+document.body.appendChild(fondo);
+document.body.appendChild(grande);
+
+}
+
+</script>
+</body>
+</html>

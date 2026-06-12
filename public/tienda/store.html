@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Line Store</title>
+    <link rel="stylesheet" href="store.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">MUSIC<span>LINE</span></div>
+    <button id="cart-btn" onclick="toggleCart()">
+        🛒 Carrito
+        <div id="cart-count">0</div>
+    </button>
+</header>
+
+<div class="grid">
+
+    <div class="product">
+        <img class="product-img" src="productos ft/camisa michael.jpg" alt="Camisa de Michael Jackson">
+        <div class="product-body">
+            <div class="product-title">Camisa de Michael Jackson</div>
+            <div class="product-price">$20.00</div>
+            <div class="size-label">Talla</div>
+            <div class="sizes">
+                <button class="size-btn" onclick="seleccionar(this)">S</button>
+                <button class="size-btn" onclick="seleccionar(this)">M</button>
+                <button class="size-btn" onclick="seleccionar(this)">L</button>
+                <button class="size-btn" onclick="seleccionar(this)">XL</button>
+            </div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'Camisa de Michael Jackson', 20.00, true)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img class="product-img" src="productos ft/figura de big notorious.jpg" alt="Figura de Big Notorious">
+        <div class="product-body">
+            <div class="product-title">Figura de Big Notorious</div>
+            <div class="product-price">$20.00</div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'Figura de Big Notorious', 20.00, false)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img class="product-img" src="productos ft/tupac.jpg" alt="Sudadera de Tupac">
+        <div class="product-body">
+            <div class="product-title">Sudadera de Tupac</div>
+            <div class="product-price">$90.00</div>
+            <div class="size-label">Talla</div>
+            <div class="sizes">
+                <button class="size-btn" onclick="seleccionar(this)">S</button>
+                <button class="size-btn" onclick="seleccionar(this)">M</button>
+                <button class="size-btn" onclick="seleccionar(this)">L</button>
+                <button class="size-btn" onclick="seleccionar(this)">XL</button>
+            </div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'Sudadera de Tupac', 90.00, true)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Panel carrito -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h2>Tu carrito</h2>
+        <button id="close-cart" onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cart-items">
+        <div class="cart-empty">
+            <span>🛒</span>
+            Tu carrito está vacío.<br>¡Agrega algo!
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <span id="subtotal-val">$0.00</span>
+        </div>
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="total-val">$0.00</span>
+        </div>
+        <button id="checkout-btn" disabled>Proceder al pago</button>
+    </div>
+</div>
+
+
+
+
+
+<div class="grid">
+
+    <div class="product">
+        <img class="product-img" src="productos ft/el malo.jpg" alt="Camisa de (el malo) de willie colón">
+        <div class="product-body">
+            <div class="product-title">Camisa de "el malo" de willie colón</div>
+            <div class="product-price">$20.00</div>
+            <div class="size-label">Talla</div>
+            <div class="sizes">
+                <button class="size-btn" onclick="seleccionar(this)">S</button>
+                <button class="size-btn" onclick="seleccionar(this)">M</button>
+                <button class="size-btn" onclick="seleccionar(this)">L</button>
+                <button class="size-btn" onclick="seleccionar(this)">XL</button>
+            </div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'Camisa de (el malo) de willie colón', 20.00, true)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img class="product-img" src="productos ft/Diomedes.jpg" alt="camisa de Diomedes diaz">
+        <div class="product-body">
+            <div class="product-title">camisa de Diomedes diaz</div>
+            <div class="product-price">$20.00</div>
+              <div class="size-label">Talla</div>
+             <div class="sizes">
+                <button class="size-btn" onclick="seleccionar(this)">S</button>
+                <button class="size-btn" onclick="seleccionar(this)">M</button>
+                <button class="size-btn" onclick="seleccionar(this)">L</button>
+                <button class="size-btn" onclick="seleccionar(this)">XL</button>
+            </div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'camisa de Diomedes diaz', 20.00, true)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img class="product-img" src="productos ft/xxx.jpg" alt="Sudadera de Tupac">
+        <div class="product-body">
+            <div class="product-title">Sudadera de xtentacion</div>
+            <div class="product-price">$90.00</div>
+            <div class="size-label">Talla</div>
+            <div class="sizes">
+                <button class="size-btn" onclick="seleccionar(this)">S</button>
+                <button class="size-btn" onclick="seleccionar(this)">M</button>
+                <button class="size-btn" onclick="seleccionar(this)">L</button>
+                <button class="size-btn" onclick="seleccionar(this)">XL</button>
+            </div>
+            <button class="add-btn" onclick="agregarAlCarrito(this, 'Sudadera de xtentacion', 90.00, true)">
+                + Añadir al carrito
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h2>Tu carrito</h2>
+        <button id="close-cart" onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cart-items">
+        <div class="cart-empty">
+            <span>🛒</span>
+            Tu carrito está vacío.<br>¡Agrega algo!
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <span id="subtotal-val">$0.00</span>
+        </div>
+        <div class="cart-total">
+            <span>Total</span>
+            <span id="total-val">$0.00</span>
+        </div>
+        <button id="checkout-btn" disabled>Proceder al pago</button>
+    </div>
+</div>
+
+<a href="../the lobby.html">
+    <button id="btn-regresar">regresar</button>
+  </a>
+
+
+<div id="toast"></div>
+<script src="store.js"></script>
+
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2>¿A nombre de quién va la factura?</h2>
+   
+    <input type="text" id="input-nombre" placeholder="Ej. Andrés García" 
+       pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" 
+       oninput="this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g, '')" />
+    <div class="modal-btns">
+      <button class="btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn-confirmar" onclick="confirmarCompra()">Descargar Factura</button>
+    </div>
+  </div>
+</div>
+
+
+</style>
+</body>
+</html>

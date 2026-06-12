@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LOBBY M/L</title>
+    <link rel="icon" href="music-line logo.png" type="image/png">
+</head>
+<body>
+ <link rel="stylesheet" href="css/the lobby.css  ">
+ <link rel="stylesheet" href="js/script.js">
+
+ <video autoplay muted loop playsinline style="position:fixed;top:50%;left:50%;width:80%;height:80%;object-fit:contain;transform:translate(-50%,-50%);z-index:-1;">
+  <source src="lobby-oficial.mp4" type="video/mp4">
+</video>
+    
+  
+<nav>
+    <a href="Noticias.html">Noticias</a>
+    <a href="Leyendas.html">Leyendas</a>
+    <a href="tienda/store.html">store M-l</a>
+    <div class="animation star-home"></div>
+</nav>
+
+<a href="index.html"></a>
+<script>
+  const btnLeyendas = document.querySelector('nav a[href="Leyendas.html"]');
+  btnLeyendas.addEventListener("click", function() {
+    window.location.href = "Leyendas.html"; 
+  });
+</script>
+</body>
+</html> 

@@ -1,0 +1,114 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.main-slides {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+  background: #000;
+  position: relative;
+}
+
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+
+  height: auto; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -55px;
+}
+
+
+.swiper-slide {
+  position: relative;
+ 
+  width: 400px; 
+  height: 550px; 
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+ 
+  filter: blur(6px) brightness(0.4);
+  transform: scale(0.8);
+}
+
+.swiper-slide-active {
+  transform: scale(1.1); 
+  filter: blur(0) brightness(1.1);
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.slide-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0,0,0,1) 20%, transparent);
+  color: white;
+  z-index: 5;
+}
+
+.slide-title {
+  font-size: clamp(24px, 4vw, 45px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 99999;
+  border: none;
+  cursor: pointer;
+  background-color: #f00;
+  color: #fff;
+  transition: 0.3s;
+  
+ 
+  box-shadow:
+    2px 2px 0px hsl(0, 92%, 50%),
+    4px 4px 0px hsla(0, 94%, 46%, 0.795),
+    6px 6px 0px hsl(0, 89%, 57%),
+    8px 8px 0px hsl(0, 78%, 56%),
+    10px 10px 0px hsl(0, 79%, 68%),
+    12px 12px 0px hsl(244, 55%, 73%),
+    14px 14px 0px hsl(229, 50%, 54%),
+    16px 16px 0px hsl(236, 60%, 49%),
+    18px 18px 0px hsl(239, 100%, 50%);
+}
+
+button:hover {
+  background-color: #2e3db7; 
+  box-shadow: none;
+  transform: scale(1.1);
+   }
+
