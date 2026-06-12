@@ -9,13 +9,12 @@
 body{
 font-family: Arial;
 background:black;
-color:white;
+color: white;
 margin:0;
 }
 
 .perfil{
-width:95%;
-max-width:1200px;
+width:900px;
 margin:auto;
 text-align:center;
 padding-top:40px;
@@ -48,134 +47,61 @@ font-weight:bold;
 }
 
 .menu span{
-cursor:pointer;
-font-size:18px;
-}
-
-/* SECCIONES */
+cursor:pointer;}
 
 .seccion{
 display:none;
 }
 
-/* BIOGRAFÍA */
-
-#bio{
-background:white;
-max-width:1100px;
-margin:30px auto;
-padding:35px;
-border-radius:15px;
-box-shadow:0px 8px 25px rgba(0,0,0,0.35);
-color:#222;
-line-height:1.8;
-text-align:justify;
-}
-
-#bio h1{
-border-left:6px solid #c62828;
-padding-left:12px;
-margin-bottom:20px;
-color:#222;
-}
-
-#bio p{
-margin-bottom:20px;
-}
-
-#bio img{
-background:white;
-padding:10px;
-border-radius:10px;
-box-shadow:0px 4px 15px rgba(0,0,0,0.25);
-transition:0.3s;
-}
-
-#bio img:hover{
-transform:scale(1.03);
-}
-
-/* FOTOS */
-
-#fotos{
-background:white;
-max-width:1100px;
-margin:30px auto;
-padding:35px;
-border-radius:15px;
-box-shadow:0px 8px 25px rgba(0,0,0,0.35);
+.activo{
+display:block;
 }
 
 .posts{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:15px;
+gap:5px;
 }
 
 .posts img{
 width:100%;
-height:300px;
-object-fit:cover;
-cursor:pointer;
-border-radius:10px;
-box-shadow:0px 4px 15px rgba(0,0,0,0.25);
-transition:0.3s;
+
+
 }
 
-.posts img:hover{
-transform:scale(1.03);
+button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 99999;
+  border: none;
+  cursor: pointer;
+  background-color: #f00;
+  color: #fff;
+  transition: 0.3s;
+  
+ 
+  box-shadow:
+    2px 2px 0px hsl(0, 92%, 50%),
+    4px 4px 0px hsla(0, 94%, 46%, 0.795),
+    6px 6px 0px hsl(0, 89%, 57%),
+    8px 8px 0px hsl(0, 78%, 56%),
+    10px 10px 0px hsl(0, 79%, 68%),
+    12px 12px 0px hsl(244, 55%, 73%),
+    14px 14px 0px hsl(229, 50%, 54%),
+    16px 16px 0px hsl(236, 60%, 49%),
+    18px 18px 0px hsl(239, 100%, 50%);
 }
 
-/* ÁLBUMES */
-
-#albumes{
-background:white;
-max-width:1100px;
-margin:30px auto;
-padding:35px;
-border-radius:15px;
-box-shadow:0px 8px 25px rgba(0,0,0,0.35);
-color:#222;
-text-align:center;
+button:hover {
+  background-color: #2e3db7; 
+  box-shadow: none;
+  transform: scale(1.1);
 }
-
-/* BOTÓN REGRESAR */
-
-button{
-position:fixed;
-bottom:30px;
-right:30px;
-width:80px;
-height:80px;
-border-radius:50%;
-z-index:99999;
-border:none;
-cursor:pointer;
-background-color:#f00;
-color:#fff;
-transition:0.3s;
-
-box-shadow:
-2px 2px 0px hsl(0, 92%, 50%),
-4px 4px 0px hsla(0, 94%, 46%, 0.795),
-6px 6px 0px hsl(0, 89%, 57%),
-8px 8px 0px hsl(0, 78%, 56%),
-10px 10px 0px hsl(0, 79%, 68%),
-12px 12px 0px hsl(244, 55%, 73%),
-14px 14px 0px hsl(229, 50%, 54%),
-16px 16px 0px hsl(236, 60%, 49%),
-18px 18px 0px hsl(239, 100%, 50%);
-}
-
-button:hover{
-background-color:#2e3db7;
-box-shadow:none;
-transform:scale(1.1);
-}
-
-/* IMAGEN GRANDE */
-
-.imagen-grande{
+ .imagen-grande{
 position:fixed;
 top:50%;
 left:50%;
@@ -196,6 +122,128 @@ background:rgba(0,0,0,0.8);
 z-index:999;
 }
 
+#bio{
+background-color: rgba(255,255,255,0.97);
+max-width: 1100px;
+margin: 30px auto;
+padding: 35px;
+border-radius: 10px;
+box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+color: #000000;
+line-height: 1.8;
+text-align: justify;
+}
+
+#bio h1{
+border-left: 6px solid #c62828;
+padding-left: 12px;
+margin-bottom: 20px;
+color: #222;
+text-align: left;
+}
+
+#bio p{
+margin-bottom: 20px;
+}
+
+#bio img{
+background: white;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+transition: 0.3s;
+}
+
+#bio img:hover{
+transform: scale(1.03);
+}
+
+#albumes{
+  color:white;
+  padding:20px;
+}
+
+
+
+
+
+
+.album-box{
+  background:white;
+  color:rgb(255, 255, 255);
+  max-width:1000px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+}
+.caja-albumes{
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("./fotos\ 2pac\ 1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  max-width:1100px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.35);
+  text-align:center;
+  color:white;
+}
+
+.caja-albumes h2{
+  margin-bottom:20px;
+}
+
+.fila-videos{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.fila-videos video{
+  width:300px;
+  height:180px;
+  border-radius:10px;
+  object-fit:cover;
+  background:black;
+}
+.modal-video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+}
+
+.modal-video video{
+  width:80%;
+  max-width:900px;
+  border-radius:10px;
+  box-shadow:0 0 25px black;
+}
+body::before{
+  content:"";
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url("./foto\ de\ fondo\ tupac.jpg") center/cover no-repeat;
+  z-index:-1;
+  filter: brightness(0.6);
+}
 </style>
 </head>
 
@@ -209,7 +257,7 @@ z-index:999;
 <div class="perfil">
 <img src="fotos de perfiiles/2pax ig.jpg" class="foto">
 
-<div class="usuario">Tupac Shakur</div>
+<div class="usuario">tupac Shakur</div>
 
 <div class="stats">
 </div>
@@ -217,88 +265,120 @@ z-index:999;
 <div class="menu">
 <span onclick="mostrar('bio')">Biografía</span>
 <span onclick="mostrar('fotos')">Fotos</span>
-<span onclick="mostrar('albumes')">Álbumes</span>
+<span onclick="mostrar('albumes')">universo del artistas</span>
 </div>
 
 <!-- BIOGRAFIA -->
-<div id="bio" class="seccion" style="display:block;"></div>
+<div id="bio" class="seccion activo">
+<h1 style="text-align: center;">Tupac Shakur</h1>
 
-  <!-- Título principal -->
-  <h1 style="text-align: center;">Tupac Shakur</h1>
-  <p>Tupac Amaru Shakur, conocido también como 2Pac, fue uno de los raperos más influyentes y famosos de la historia del hip-hop. Nació el 16 de junio de 1971 en New York City y murió el 13 de septiembre de 1996 en Las Vegas. Su música se caracterizó por hablar de la realidad social, la desigualdad, la violencia, el racismo y las dificultades de crecer en barrios pobres de Estados Unidos.</p>
+  <p>
+    Tupac Amaru Shakur, conocido también como 2Pac, fue uno de los raperos más influyentes y famosos de la historia del hip-hop. Nació el 16 de junio de 1971 en New York City y murió el 13 de septiembre de 1996 en Las Vegas. Su música se caracterizó por hablar de la realidad social, la desigualdad, la violencia, el racismo y las dificultades de crecer en barrios pobres de Estados Unidos.
+  </p>
 
-  <!-- Fotos de perfil -->
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
-    <img src="fotos de perfiiles/2pac pt.webp" width="300" style="border-radius: 8px;">
-    <img src="fotos de perfiiles/tupac pt.png" width="200" style="border-radius: 8px;">
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;">
+    <img src="fotos de perfiiles/2pac pt.webp" width="300" style="border-radius:8px;">
+    <img src="fotos de perfiiles/tupac pt.png" width="200" style="border-radius:8px;">
   </div>
 
-  <!-- Infancia -->
-  <h1 style="text-align: center;">Infancia y juventud</h1>
-  <p>Tupac nació en una familia muy ligada a movimientos sociales. Su madre, Afeni Shakur, fue activista del grupo político Black Panther Party, que luchaba por los derechos de la comunidad afroamericana. Debido a los problemas económicos y a la situación social que vivía su familia, Tupac pasó parte de su infancia mudándose constantemente entre ciudades.</p>
-  <p>Durante su adolescencia se interesó mucho por el arte. Estudió actuación, poesía y música en la Baltimore School for the Arts, donde desarrolló su talento para escribir letras profundas y emocionales.</p>
+  <h1 style="text-align:center;">Infancia y juventud</h1>
+ <div style="display:flex; justify-content:center; margin:20px 0;">
+    <img src="fotos de perfiiles/foto infancia tupac.webp" width="200" style="border-radius:8px;">
+  </div>
+  <p>
+    Tupac nació en una familia muy ligada a movimientos sociales. Su madre, Afeni Shakur, fue activista del grupo político Black Panther Party, que luchaba por los derechos de la comunidad afroamericana. Debido a los problemas económicos y a la situación social que vivía su familia, Tupac pasó parte de su infancia mudándose constantemente entre ciudades.
+  </p>
 
-  <!-- Carrera -->
-  <h1 style="text-align: center;">Carrera musical</h1>
-  <p>A principios de los años 90, Tupac empezó su carrera musical dentro del grupo Digital Underground. Su primer álbum fue <strong>2Pacalypse Now</strong> en 1991. Luego lanzó varios álbumes exitosos:</p>
+  <p>
+    Durante su adolescencia se interesó mucho por el arte. Estudió actuación, poesía y música en la Baltimore School for the Arts, donde desarrolló su talento para escribir letras profundas y emocionales.
+  </p>
 
-  <!-- Álbumes en fila -->
-  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
-    <div style="text-align: center;">
-      <img src="fotos de perfiiles/album 2p.jpg" width="150" style="border-radius: 8px;">
-      <p style="margin-top: 8px;">Strictly 4 My N.I.G.G.A.Z. (1993)</p>
+  <h1 style="text-align:center;">Carrera musical</h1>
+<div style="display:flex; justify-content:center; margin:20px 0;">
+    <img src="fotos de perfiiles/concierto tupac.jpg" width="200" style="border-radius:8px;">
+  </div>
+  <p>
+    A principios de los años 90, Tupac empezó su carrera musical dentro del grupo Digital Underground. Su primer álbum fue <strong>2Pacalypse Now</strong> en 1991.
+  </p>
+
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin:20px 0;">
+
+    <div style="text-align:center;">
+      <img src="fotos de perfiiles/album 2p.jpg" width="150" style="border-radius:8px;">
+      <p>Strictly 4 My N.I.G.G.A.Z. (1993)</p>
     </div>
-    <div style="text-align: center;">
-      <img src="fotos de perfiiles/tupac album.png" width="150" style="border-radius: 8px;">
-      <p style="margin-top: 8px;">Me Against the World (1995)</p>
+
+    <div style="text-align:center;">
+      <img src="fotos de perfiiles/tupac album.png" width="150" style="border-radius:8px;">
+      <p>Me Against the World (1995)</p>
     </div>
-    <div style="text-align: center;">
-      <img src="fotos de perfiiles/all-eyez-on-me.webp" width="150" style="border-radius: 8px;">
-      <p style="margin-top: 8px;">All Eyez on Me (1996)</p>
+
+    <div style="text-align:center;">
+      <img src="fotos de perfiiles/all-eyez-on-me.webp" width="150" style="border-radius:8px;">
+      <p>All Eyez on Me (1996)</p>
     </div>
+
+    </div>
+
+    <h1 style="text-align:center;">Influencia y legado</h1>
+
+   <p>
+    Tupac no solo fue rapero; también actuó en películas y escribió poesía. Muchas de sus canciones hablaban de problemas reales como la pobreza, la discriminación, la violencia en las calles y la vida en los barrios marginales.
+  </p>
+
+  <h1 style="text-align:center;">Muerte</h1>
+
+  <div style="display:flex; justify-content:center; margin:20px 0;">
+    <img src="fotos de perfiiles/estatua 2pc.jpg" width="200" style="border-radius:8px;">
   </div>
 
-  <p>Este último se convirtió en uno de los discos más famosos del rap y consolidó a Tupac como una de las figuras más importantes del género.</p>
+  <p>
+    El 7 de septiembre de 1996, Tupac fue herido en un tiroteo en Las Vegas después de asistir a una pelea de boxeo. Tras varios días en el hospital, falleció el 13 de septiembre de 1996 a los 25 años. Su muerte sigue siendo uno de los misterios más debatidos en la historia de la música.
+  </p>
 
-  <!-- Legado -->
-  <h1 style="text-align: center;">Influencia y legado</h1>
-  <p>Tupac no solo fue rapero; también actuó en películas y escribió poesía. Muchas de sus canciones hablaban de problemas reales como la pobreza, la discriminación, la violencia en las calles y la vida en los barrios marginales. A pesar de que murió muy joven, su música siguió influyendo a generaciones de artistas.</p>
+  <h1 style="text-align:center;">Última foto</h1>
 
-  <!-- Muerte -->
-  <h1 style="text-align: center;">Muerte</h1>
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <img src="fotos de perfiiles/estatua 2pc.jpg" width="200" style="border-radius: 8px;">
-  </div>
-  <p>El 7 de septiembre de 1996, Tupac fue herido en un tiroteo en Las Vegas después de asistir a una pelea de boxeo. Tras varios días en el hospital, falleció el 13 de septiembre de 1996 a los 25 años. Su muerte sigue siendo uno de los misterios más debatidos en la historia de la música.</p>
-
-  <!-- Última foto -->
-  <h1 style="text-align: center;">Última foto</h1>
-  <div style="display: flex; justify-content: center; margin: 20px 0;">
-    <img src="fotos de perfiiles/ultima foto.jpg" width="300" style="border-radius: 8px;">
+  <div style="display:flex; justify-content:center; margin:20px 0;">
+    <img src="fotos de perfiiles/ultima foto.jpg" width="300" style="border-radius:8px;">
   </div>
 
-</div>
-
-
-
+   </div>
 <div id="fotos" class="seccion">
 <div class="posts">
-<img src="fotos 2pac 1.jpg"onclick="abrir(this)">
-<img src="fotos de ig/remplazar 2pac.jpg"onclick="abrir(this)">
-<img src="fotos de ig/remplazo 3.jpg"onclick="abrir(this)">
-<img src="fotos de ig/fotos 2pac4.png"onclick="abrir(this)">
-<img src="fotos de ig/fotos ig2.jpg"onclick="abrir(this)">
-<img src="fotos de ig/tupac foto ig.png"onclick="abrir(this)">
+   <img src="fotos de ig/remplazar 2pac.jpg"onclick="abrir(this)">
+   <img src="fotos de ig/fotos 2pac 3.png"onclick="abrir(this)">
+   <img src="fotos de ig/remplazo 3.jpg"onclick="abrir(this)">
+   <img src="fotos de ig/fotos ig2.jpg"onclick="abrir(this)">
+   <img src="fotos de ig/tupac foto ig.png"onclick="abrir(this)">
+    <img src="fotos de ig/fotos 2pac4.png"onclick="abrir(this)">
+   </div>
 </div>
-</div>
+
 
 
 
-<div id="albumes" class="seccion">
-<p>Álbumes destacados próximamente 🎶</p>
-</div>
+ <div id="albumes" class="seccion">
+
+  <div class="caja-albumes">
+
+    <h2>Canciones mas escuchadas</h2>
+
+    <div class="fila-videos">
+      <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM (1).mp4" controls></video>
+      <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM (2).mp4" controls></video>
+        <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM.mp4" controls></video>
+    </div>
+        <h2>entrevistas</h2>
+    <div class="fila-videos">
+            <video src="fotos de perfiiles/entrevista 2tupac.mp4"controls></video>
+      <video src="fotos de perfiiles/entrevista tupac.mp4" controls></video>
+          
+    </div>
+
+  </div>
 
 </div>
+</section>
 
 <script>
 
@@ -347,6 +427,23 @@ document.body.appendChild(grande);
 
 }
 
+function abrirVideo(video){
+
+  let fondo = document.createElement("div");
+  fondo.className = "modal-video";
+
+  let clon = document.createElement("video");
+  clon.src = video.src;
+  clon.controls = true;
+  clon.autoplay = true;
+
+  fondo.appendChild(clon);
+  document.body.appendChild(fondo);
+
+  fondo.onclick = function(){
+    fondo.remove();
+  }
+   }
 </script>
 </body>
 </html>

@@ -48,21 +48,14 @@ font-weight:bold;
 
 .menu span{
 cursor:pointer;
-}
-
-
-/* SECCIONES */
-
+ }
 .seccion{
 display:none;
 }
 
 .activo{
 display:block;
-}
-
-/* FOTOS */
-
+ }
 .posts{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -128,61 +121,121 @@ background:rgba(0,0,0,0.8);
 z-index:999;
 }
 
-/* CAJAS ESTILO MICHAEL JACKSON */
-
-#bio,
-#fotos,
-#albumes{
-    background:white;
-    max-width:1100px;
-    margin:30px auto;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,.4);
-}
-
 #bio{
-    color:#222;
-    text-align:justify;
-    line-height:1.8;
+background-color: rgba(255,255,255,0.97);
+max-width: 1100px;
+margin: 30px auto;
+padding: 35px;
+border-radius: 10px;
+box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+color: #222;
+line-height: 1.8;
+text-align: justify;
 }
 
-#bio h1,
-#bio h2{
-    color:#222;
-    border-left:5px solid #c62828;
-    padding-left:12px;
-    text-align:left !important;
+#bio h1{
+border-left: 6px solid #c62828;
+padding-left: 12px;
+margin-bottom: 20px;
+color: #222;
+text-align: left;
 }
 
-#fotos{
-    color:#222;
+#bio p{
+margin-bottom: 20px;
 }
 
-#albumes{
-    color:#222;
-    text-align:center;
+#bio img{
+background: white;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+transition: 0.3s;
 }
 
-.posts{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
+#bio img:hover{
+transform: scale(1.03);
 }
 
-.posts img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:10px;
-    cursor:pointer;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
-    transition:.3s;
+
+.album-box{
+  background:white;
+  color:rgb(255, 255, 255);
+  max-width:1000px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  text-align:center;
+}
+.caja-albumes{
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("./diomedes\ portada.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  max-width:1100px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.35);
+  text-align:center;
+  color:white;
 }
 
-.posts img:hover{
-    transform:scale(1.03);
+.caja-albumes h2{
+  margin-bottom:20px;
 }
+
+.fila-videos{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.fila-videos video{
+  width:300px;
+  height:180px;
+  border-radius:10px;
+  object-fit:cover;
+  background:black;
+}
+.modal-video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+}
+
+.modal-video video{
+  width:80%;
+  max-width:900px;
+  border-radius:10px;
+  box-shadow:0 0 25px black;
+}
+body::before{
+  content:"";
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url("./Diomedez\ dIaz\ recuadro.jpg") center/cover no-repeat;
+  z-index:-1;
+  filter: brightness(0.6);
+}
+
+
 </style>
 </head>
 
@@ -204,34 +257,24 @@ z-index:999;
 <div class="menu">
 <span onclick="mostrar('bio')">Biografía</span>
 <span onclick="mostrar('fotos')">Fotos</span>
-<span onclick="mostrar('albumes')">Álbumes</span>
-</div>
-
-<!-- BIOGRAFIA -->
+<span onclick="mostrar('albumes')">Universo del artista</span>
+ </div>
 <div id="bio"class= "seccion activo">
-
-  <!-- Título principal -->
-  <h1 style="text-align: center;">Diomedes Díaz</h1>
+<h1 style="text-align: center;">Diomedes Díaz</h1>
 
   <!-- Biografía -->
   <p>Diomedes Dionisio Díaz Maestre, conocido como <strong>"El Cacique de La Junta"</strong>, nació el 26 de mayo de 1957 en La Junta, un pequeño corregimiento del municipio de San Juan del Cesar, en el departamento de La Guajira, Colombia. Fue uno de los cantantes de vallenato más importantes y exitosos de la historia del país. Gracias a su talento, carisma y capacidad para transmitir emociones a través de sus canciones, logró convertirse en una leyenda de la música colombiana.</p>
-
-  <!-- Fotos iniciales centradas -->
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+ <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
     <img src="fotos de perfiiles/COMIENZOZ DZ 3.jpg" width="150" style="border-radius: 8px;">
     <img src="fotos de perfiiles/DiomdesVsRafaelOrozco.jpg" width="300" style="border-radius: 8px;">
     <img src="fotos de perfiiles/COMIENZOA dz 2.jpg" width="200" style="border-radius: 8px;">
   </div>
-
-  <!-- Infancia -->
-  <h1 style="text-align: center;">Infancia y juventud</h1>
+<h1 style="text-align: center;">Infancia y juventud</h1>
 
   <p>Diomedes creció en una familia humilde junto a varios hermanos. Desde muy pequeño estuvo rodeado por la cultura vallenata de La Guajira y el Cesar, regiones reconocidas como la cuna de este género musical. Durante su infancia ayudó a su familia en diferentes labores mientras desarrollaba su pasión por el canto y la composición.</p>
 
   <p>Sus padres fueron Rafael María Díaz y Elvira Maestre. A pesar de las dificultades económicas, siempre se destacó por su personalidad alegre y espontánea. Desde joven escribía versos inspirados en experiencias personales, costumbres de su tierra y acontecimientos de su vida cotidiana.</p>
-
-  <!-- Inicios -->
-  <h1 style="text-align: center;">Inicios en la música</h1>
+ <h1 style="text-align: center;">Inicios en la música</h1>
  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
      <img src="fotos de perfiiles/BIO DIOMEDES DIAS.webp" width="290" style="border-radius: 8px;">
   </div>
@@ -240,9 +283,7 @@ z-index:999;
   <p>Su gran oportunidad llegó cuando comenzó a trabajar junto a reconocidos acordeoneros vallenatos. En 1976 grabó su primer álbum profesional, <strong>Herencia Musical</strong>, junto a Nafer Durán, iniciando así una de las carreras más exitosas en la historia del vallenato.</p>
 
   <p>Desde sus primeras grabaciones llamó la atención por su voz característica y la manera única en que interpretaba las canciones, conectando rápidamente con el público.</p>
-
-  <!-- Ascenso -->
-  <h1 style="text-align: center;">Ascenso a la fama</h1>
+<h1 style="text-align: center;">Ascenso a la fama</h1>
  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
      <img src="fotos de perfiiles/BIO DIOMEDES2 DIAS.jpg" width="290" style="border-radius: 8px;">
   </div>
@@ -252,7 +293,7 @@ z-index:999;
 
   <p>Su éxito ayudó a expandir el vallenato a nivel nacional e internacional, convirtiéndolo en uno de los máximos representantes de la música colombiana.</p>
 
-  <!-- Acordeoneros -->
+ 
   <h2 style="text-align: center; margin-top: 30px;">Sus acordeoneros</h2>
 
   <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 16px;">
@@ -278,22 +319,15 @@ z-index:999;
   </div>
 
   <p>Durante su carrera trabajó con algunos de los acordeoneros más importantes de la historia del vallenato. Entre ellos destacan Colacho Mendoza, Juancho Rois, Iván Zuleta, Franco Argüelles, Nafer Durán y Cocha Molina. La unión musical entre Diomedes y Juancho Rois es considerada una de las más exitosas del género.</p>
-
-  <!-- Álbumes -->
-  <h1 style="text-align: center;">Álbumes más importantes</h1>
+<h1 style="text-align: center;">Álbumes más importantes</h1>
 
   <p>A lo largo de más de tres décadas de carrera artística, Diomedes Díaz grabó más de 35 producciones musicales. Muchos de sus álbumes lograron ventas millonarias y continúan siendo referentes del vallenato colombiano.</p>
 
   <p>Entre sus producciones más reconocidas se encuentran <strong>Herencia Musical</strong>, <strong>Título de Amor</strong>, <strong>Mi Vida Musical</strong>, <strong>La Locura</strong>, <strong>Listo Pa' la Foto</strong> y <strong>Gracias a Dios</strong>. Cada uno de estos trabajos fortaleció su legado y consolidó su lugar como una leyenda del género.</p>
-
-  <!-- Estilo musical -->
-  <h1 style="text-align: center;">Estilo musical</h1>
+<h1 style="text-align: center;">Estilo musical</h1>
 
   <p>Diomedes revolucionó el vallenato gracias a su forma única de interpretar las canciones. Su voz potente, su capacidad para improvisar y la emoción que transmitía en cada presentación hicieron que millones de personas se identificaran con sus letras.</p>
-
-  <p>Sus canciones hablaban principalmente sobre el amor, el desamor, la amistad, la familia y las experiencias cotidianas. Muchas de ellas estaban inspiradas en hechos reales de su propia vida.</p>
-
-  <!-- Canciones famosas -->
+<p>Sus canciones hablaban principalmente sobre el amor, el desamor, la amistad, la familia y las experiencias cotidianas. Muchas de ellas estaban inspiradas en hechos reales de su propia vida.</p>
   <h1 style="text-align: center;">Canciones más famosas</h1>
 
   <p>Durante su trayectoria grabó cientos de canciones que se convirtieron en clásicos de la música colombiana. Algunas de las más recordadas son:</p>
@@ -330,24 +364,19 @@ z-index:999;
 
   <p>Fue padre de varios hijos, algunos de los cuales siguieron carreras relacionadas con la música y el entretenimiento, manteniendo vivo el legado artístico de la familia Díaz.</p>
 
-  <!-- Influencia -->
-  <h1 style="text-align: center;">Influencia y legado</h1>
+   <h1 style="text-align: center;">Influencia y legado</h1>
 
   <p>La influencia de Diomedes Díaz va mucho más allá de sus canciones. Su música ayudó a popularizar el vallenato en todo el país y abrió las puertas para que nuevas generaciones de artistas alcanzaran reconocimiento nacional e internacional.</p>
 
   <p>Sus composiciones continúan siendo interpretadas por cantantes actuales y siguen acumulando millones de reproducciones en plataformas digitales. Su legado permanece vivo entre los llamados "diomedistas", seguidores que continúan honrando su memoria.</p>
-
-  <!-- Muerte -->
-  <h1 style="text-align: center;">Muerte</h1>
+<h1 style="text-align: center;">Muerte</h1>
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
      <img src="fotos de perfiiles/BIO DIOMEDES DIAS.webp" width="200" style="border-radius: 8px;">
   </div>
 
   <p>El 22 de diciembre de 2013, Diomedes Díaz falleció en Valledupar a los 56 años de edad. La noticia conmocionó a Colombia y generó numerosas muestras de cariño por parte de artistas, seguidores y medios de comunicación.</p>
 
-  <p>Su funeral reunió a miles de personas que viajaron desde distintas regiones del país para despedir a quien consideraban el máximo ídolo del vallenato. Fue una de las despedidas más multitudinarias en la historia de la música colombiana.</p>
-
-  <!-- Legado eterno -->
+   <p>Su funeral reunió a miles de personas que viajaron desde distintas regiones del país para despedir a quien consideraban el máximo ídolo del vallenato. Fue una de las despedidas más multitudinarias en la historia de la música colombiana.</p>
   <h1 style="text-align: center;">Legado eterno</h1>
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
@@ -369,17 +398,34 @@ z-index:999;
 <img src="fotos de perfiiles/DZ6.jpeg"onclick="abrir(this)">
 <img src="fotos de perfiiles/DZ7.jpg"onclick="abrir(this)">
 </div>
+ </div>
+
+<div id="albumes class="seccion">
+
+  <div class="caja-albumes">
+
+    <h2>Canciones mas escuchadas</h2>
+
+    <div class="fila-videos">
+      <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM (1).mp4" controls></video>
+      <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM (2).mp4" controls></video>
+        <video src="fotos de perfiiles/WhatsApp Video 2026-06-11 at 11.26.54 PM.mp4" controls></video>
+    </div>
+        <h2>entrevistas</h2>
+  
+    <div class="fila-videos">
+            <video src="fotos de perfiiles/entrevista 2tupac.mp4"controls></video>
+      <video src="fotos de perfiiles/entrevista tupac.mp4" controls></video>
+          
+    </div>
+
+  </div>
+
 </div>
-
-
+</section>
 
 
   
-<div id="albumes" class="seccion">
-<p>Álbumes destacados próximamente 🎶</p>
-</div>
-
-</div>
 
 <script>
 

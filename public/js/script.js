@@ -1,8 +1,5 @@
-// ESPERAR A QUE CARGUE EL DOM
-document.addEventListener("DOMContentLoaded", () => {
-
-    // MOSTRAR / OCULTAR FORMULARIOS
-    window.mostrarRegistro = function () {
+     document.addEventListener("DOMContentLoaded", () => {
+       window.mostrarRegistro = function () {
         document.getElementById("loginBox").style.display = "none";
         document.getElementById("registerBox").style.display = "block";
     }
@@ -22,15 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         error.innerText = "";
 
-        // ✅ Validar campos vacíos
-        if (!nombre || !correo || !password || !repetir) {
-            error.innerText = "Completa todos los campos ❗";
+         if (!nombre || !correo || !password || !repetir) {
+            error.innerText = "Completa todos los campos!";
             return;
         }
-
-        // ✅ Validar contraseñas iguales
-        if (password !== repetir) {
-            error.innerText = "Las contraseñas no coinciden ❌";
+         if (password !== repetir) {
+            error.innerText = "Las contraseñas no coinciden!";
             return;
         }
 
@@ -61,16 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // LOGIN
-    window.login = async function () {
+      window.login = async function () {
         const email = document.getElementById("loginUser").value.trim();
         const password = document.getElementById("loginPass").value.trim();
         const error = document.getElementById("loginError");
 
         error.innerText = "";
-
-        // ✅ Validar campos vacíos
-        if (!email || !password) {
+          if (!email || !password) {
             error.innerText = "Completa todos los campos";
             return;
         }
@@ -89,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            alert(data); // mensaje Bienvenido
-            window.location.href = "the lobby.html"; // redirige después de login
+            alert(data); 
+            window.location.href = "the lobby.html"; 
 
         } catch (err) {
             error.innerText = "Error al conectar con el servidor";
